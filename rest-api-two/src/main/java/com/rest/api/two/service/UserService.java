@@ -2,9 +2,8 @@ package com.rest.api.two.service;
 
 import com.fasterxml.jackson.databind.ser.FilterProvider;
 import com.fasterxml.jackson.databind.ser.impl.SimpleBeanPropertyFilter;
-import com.fasterxml.jackson.databind.ser.impl.SimpleFilterProvider;
-import com.himanshu.Rest.APIs.entity.User;
-import com.himanshu.Rest.APIs.repository.UserRepository;
+import com.rest.api.two.entity.User;
+import com.rest.api.two.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.converter.json.MappingJacksonValue;
 import org.springframework.stereotype.Service;
@@ -20,13 +19,13 @@ public class UserService {
 
     public MappingJacksonValue getUser() {
 
-        List<User> users = userRepository.findAll();
-
-        SimpleBeanPropertyFilter filter = SimpleBeanPropertyFilter.filterOutAllExcept("name", "age");
-        FilterProvider filters = new SimpleFilterProvider().addFilter("SomeBeanFilter", filter);
-        MappingJacksonValue mapping = new MappingJacksonValue(users);
-        mapping.setFilters(filters);
-        return mapping;
+//        List<User> users = userRepository.findAll();
+//
+//        SimpleBeanPropertyFilter filter = SimpleBeanPropertyFilter.filterOutAllExcept("name", "age");
+//        FilterProvider filters = new SimpleFilterProvider().addFilter("SomeBeanFilter", filter);
+//        MappingJacksonValue mapping = new MappingJacksonValue(users);
+//        mapping.setFilters(filters);
+//        return mapping;
     }
 
 
