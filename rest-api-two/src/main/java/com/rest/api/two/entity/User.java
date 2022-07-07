@@ -1,7 +1,7 @@
 package com.rest.api.two.entity;
 
 import com.fasterxml.jackson.annotation.JsonFilter;
-import io.swagger.v3.oas.annotations.tags.Tag;
+
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -9,7 +9,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-@Tag(name = "User")
+//@Tag(name = "User")
 //@ApiModel(description = "Contains all the details about User")
 //@JsonIgnoreProperties(value = {"password"})
 @JsonFilter("SomeBeanFilter")

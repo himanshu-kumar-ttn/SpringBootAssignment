@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.persistence.GeneratedValue;
+
 @RestController
 @RequestMapping("/api")
 public class Controller {
@@ -15,6 +17,10 @@ public class Controller {
     @Autowired
     private MessageSource messageSource;
 
+    @GetMapping("/hello")
+    public String hello(){
+        return "Hello";
+    }
 
     @GetMapping("/get-greeting")
     public String greetUser() {
